@@ -1,0 +1,44 @@
+TEST CASES FOR THE TEMPERATURE HMI
+
+Project: TempHMI zh yk ah
+Team: Yahia Khalaf, Ziad Ahmed and Amr Khaled
+Board: Arduino Uno with an LM35 sensor, a 16x2 LCD with I2C board, the LH button on pin 2, the LL button on pin 3, a red LED on pin 8 and a blue LED on pin 9
+Default limits: LL is 20 and LH is 30
+
+All tests were done by hand on the real board and all of them passed.
+
+
+Test 1, Power on and temperature reading
+Steps: Plug in the USB cable and compare the screen with a room thermometer.
+Expected: The screen shows the temperature, LL is 20, LH is 30, both LEDs are off, and the reading is within 1 degree of the thermometer.
+Result: Pass
+
+Test 2, Heating the sensor
+Steps: Hold the LM35 between your fingers.
+Expected: The temperature goes up within a few seconds.
+Result: Pass
+
+Test 3, Changing LH
+Steps: Tap the LH button once, then hold it.
+Expected: The tap raises LH by 1. Holding it lowers LH by 1 after about half a second, and it keeps going down.
+Result: Pass
+
+Test 4, Changing LL
+Steps: Tap the LL button once, then hold it.
+Expected: The tap raises LL by 1. Holding it lowers LL by 1 after about half a second, and it keeps going down.
+Result: Pass
+
+Test 5, Limits cannot cross
+Steps: Hold LH down until it stops, then tap LL up until it stops.
+Expected: LH stops 1 degree above LL, and LL stops 1 degree below LH.
+Result: Pass
+
+Test 6, Too hot
+Steps: Hold LH until it is below the room temperature, then raise it again.
+Expected: The screen shows HIGH and the red LED turns on. When LH is raised above the temperature, the screen shows OK and the LED turns off.
+Result: Pass
+
+Test 7, Too cold
+Steps: Tap LL until it is above the room temperature.
+Expected: The screen shows LOW, the blue LED is on and the red LED is off.
+Result: Pass

@@ -1,0 +1,12 @@
+Item,Part,Quantity,Unit Price (EGP),Total Price (EGP),Notes
+1,Arduino Uno R3 (CH340) with USB cable,1,340,340,Microcontroller board with ATmega328P
+2,16x2 LCD with I2C board (PCF8574),1,110,110,Display
+3,LM35DZ temperature sensor,1,30,30,
+4,LED 5 mm red,1,1,1,Too hot warning
+5,LED 5 mm blue,1,1,1,Too cold warning
+6,220 ohm resistor,2,0.5,1,One for each LED
+7,Push button,2,1,2,LH and LL buttons
+8,Breadboard,1,50,50,
+9,Jumper wires,1,40,40,One set
+,,,,,
+,Total,,,575,
